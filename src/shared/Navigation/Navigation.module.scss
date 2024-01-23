@@ -1,0 +1,17 @@
+.nav {
+  padding: 20px 0;
+  background: lightgrey;
+  > a {
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+  }
+  a:hover {
+    color: #8e8d8d;
+  }
+  a:link {
+    color: black;
+  }
+}
