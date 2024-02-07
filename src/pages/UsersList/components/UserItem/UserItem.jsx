@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import styles from './UserItem.module.scss'
 
-const UserItem = ({name, phone, email, id, address}) => {
+const UserItem = ({name, phone, email}) => {
 
     return (
         <div className={styles.userBlock}>
@@ -15,7 +15,6 @@ const UserItem = ({name, phone, email, id, address}) => {
             <div>Working hours - {Math.round(Math.random()*100)}</div>
             <div>{new Date().toDateString()}</div>
         </div>
-
     );
 }
 

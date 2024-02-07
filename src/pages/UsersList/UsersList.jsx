@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import UserItem from "./components/UserItem/UserItem";
+import {Link} from "react-router-dom";
 
 const UsersList = () => {
 
@@ -15,21 +16,22 @@ const UsersList = () => {
         }
 
     },[])
-    console.log(dataUsers)
 
   return (
     <>
       <div>UsersList</div>
         {dataUsers?.map((user) => {
             return (
-                <UserItem
-                    key={user.id}
-                    name={user.name}
-                    phone={user.phone}
-                    email={user.email}
-                    id={user.id}
-                    address={user.address}
-                />
+                <Link to={`/${user.id}`}>
+                    <UserItem
+                        key={user.id}
+                        name={user.name}
+                        phone={user.phone}
+                        email={user.email}
+                        id={user.id}
+                        address={user.address}
+                    />
+                </Link>
             )
         })}
     </>
