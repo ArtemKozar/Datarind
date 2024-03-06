@@ -1,6 +1,8 @@
 import React from 'react'
 import Parse from "parse/dist/parse.min"
 
+import styles from './Home.module.scss'
+
 const Home = () => {
 
     Parse.serverURL = 'https://parseapi.back4app.com';
@@ -24,12 +26,12 @@ const Home = () => {
         }
     })();
 
-
-
-
   return (
     <>
-      <div>Home</div>
+      <div>Home </div>
+      <div>Home </div>
+      <div>Home </div>
+      <div>Home </div>
     </>
   )
 }

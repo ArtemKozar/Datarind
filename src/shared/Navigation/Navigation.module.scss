@@ -1,17 +1,52 @@
+@import '/src/styles/main';
+
 .nav {
-  padding: 20px 0;
-  background: lightgrey;
+  height: 100px;
+  @include Header;
+  background: $base_color;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
   > a {
-    margin-left: 10px;
+    padding-right: 64px;
     text-decoration: none;
   }
+
   a:visited {
-    color: black;
+    color: $dark_color;
   }
   a:hover {
-    color: #8e8d8d;
+    color: $general_color;
   }
   a:link {
-    color: black;
+    color: $dark_color;
+  }
+
+  a:first-child{
+    color:$general_color;
+    padding-right: 591px;
+  }
+
+  a:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $dark_color;
+    border-radius: 26px;
+    width: 147px;
+    height: 56px;
+    padding-right: 0 ;
+    span {
+      padding-left: 8px;
+    }
+  }
+
+  .logo {
+    text-transform: uppercase;
+    color: $general_color;
+    font-size: 32px;
   }
 }
