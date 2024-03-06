@@ -1,0 +1,9 @@
+@import '/src/styles/variables';
+
+@mixin Header {
+  font-family: $main_font;
+  font-style: normal;
+  color: $dark_color;
+  font-size: 18px;
+  font-weight: 700;
+}
