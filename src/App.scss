@@ -1,11 +1,18 @@
 @import '/src/styles/main';
 
 :global {
-  html, body, #root {
+  html,
+  body,
+  #root {
     background-color: $darker_color;
     height: 100%;
     width: 100%;
 
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
     margin: 0;
     padding: 0;
   }

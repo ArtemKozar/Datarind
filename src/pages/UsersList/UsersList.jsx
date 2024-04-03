@@ -18,6 +18,7 @@ const UsersList = () => {
 
   return (
     <>
+      <Link to={'/createuser'}>Add user</Link>
       <div>UsersList</div>
       {dataUsers?.map((user) => {
         return (

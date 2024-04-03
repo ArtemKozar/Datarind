@@ -7,6 +7,7 @@ import Navigation from './shared/Navigation/Navigation'
 import UserProfile from './pages/UserProfile/UserProfile'
 
 import './App.scss'
+import AddUser from './pages/AddUser/AddUser'
 
 const app_id = process.env.REACT_APP_PARSE_APP_ID
 const host_url = process.env.REACT_APP_PARSE_HOST_URL
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="userslist" element={<UsersList />} />
+          <Route path="createuser" element={<AddUser />} />
           <Route path=":id" element={<UserProfile />} />
         </Routes>
       </div>
