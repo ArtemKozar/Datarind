@@ -1,13 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-import UserItem from './components/UserItem/UserItem'
-import { Link } from 'react-router-dom'
-import Parse from 'parse/dist/parse.min'
-import { fetchUsers } from '../../redux/getUsers'
+import UserItem from "./components/UserItem/UserItem";
+import { Link } from "react-router-dom";
+import Parse from "parse/dist/parse.min";
+import { fetchUsers } from "../../redux/getUsers";
 
 const UsersList = () => {
-  const [dataUsers, setDataUsers] = useState()
-  const [dataUsers1, setDataUsers1] = useState()
+  const [dataUsers, setDataUsers] = useState();
 
   // const app_id = process.env.REACT_APP_PARSE_APP_ID
   // const host_url = process.env.REACT_APP_PARSE_HOST_URL
@@ -32,45 +31,33 @@ const UsersList = () => {
   // }
 
   useEffect(() => {
-    fetchUsers().then((res) => console.log(res))
-  }, [])
+    fetchUsers().then((result) => setDataUsers(result));
+  }, []);
 
-  console.log(dataUsers1)
+  console.log(dataUsers);
 
   return (
     <>
-      <Link to={'/createuser'}>Add user</Link>
+      <Link to={"/createuser"}>Add user</Link>
       <div>UsersList</div>
-      {dataUsers?.map((object) => {
-        return (
-          <Link to={`/${object.id}`}>
-            <UserItem
-              key={object.id}
-              name={object.get('Name')}
-              phone={object.get('Phone')}
-              email={object.get('Email')}
-              id={object.id}
-              // address={user.address}
-            />
-          </Link>
-        )
-      })}
-      {/* {dataUsers?.map((user) => {
+      {dataUsers?.map((user) => {
+        console.log(user.id);
         return (
           <Link to={`/${user.id}`}>
             <UserItem
               key={user.id}
-              name={user.name}
-              phone={user.phone}
-              email={user.email}
+              name={user.Name}
+              lastName={user.LastName}
+              email={user.Email}
+              phone={user.Phone}
               id={user.id}
-              address={user.address}
+              address={user.Address}
             />
           </Link>
         );
-      })} */}
+      })}
     </>
-  )
-}
+  );
+};
 
-export default UsersList
+export default UsersList;

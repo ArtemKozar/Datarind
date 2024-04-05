@@ -11,8 +11,10 @@ export async function fetchUsers() {
     const keyValues = [
       'Name',
       'LastName',
-      'Birthday',
       'Email',
+      'Phone',
+      'Birthday',
+      'Address',
       'Position',
       'PlanedHours',
       'ReportedHours',
